@@ -1,0 +1,23 @@
+{
+  "name": "connect-quatro",
+  "version": "1.0.0",
+  "description": "Strategy game based on Connect Four.",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhavill/connect-quatro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhavill/connect-quatro/issues"
+  },
+  "homepage": "https://github.com/rhavill/connect-quatro#readme",
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.0"
+  }
+}
