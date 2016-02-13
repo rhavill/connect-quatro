@@ -5,4 +5,5 @@ if (module.hot) {
 require("./style.css");
 
 import Game from './Game'
-let game = new Game();
+const game = new Game()
+game.run()

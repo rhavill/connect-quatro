@@ -1,23 +1,17 @@
 import factory from './CheckerFactory'
+import Renderer from './Renderer'
 
-import {VIEW_ANGLE, ASPECT, NEAR, FAR, WIDTH, HEIGHT}  from './constants'
 
 export default class  Game {
     constructor() {
-        this.scene = new THREE.Scene();
-        this.camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
-        this.renderer = new THREE.WebGLRenderer();
-        this.renderer.setSize(WIDTH, HEIGHT);
-        document.body.appendChild(this.renderer.domElement);
+        this.renderer = new Renderer(document.body);
         let checker = factory.makeChecker();
-        this.scene.add(checker.getMesh());
-        this.camera.position.z = 5;
-        this.render();
+        this.renderer.add(checker.getMesh());
+
     }
 
-    render() {
-
-        this.renderer.render(this.scene, this.camera);
+    run() {
+        this.renderer.render();
     };
 }
 
