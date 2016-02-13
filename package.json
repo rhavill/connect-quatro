@@ -16,12 +16,17 @@
     "url": "https://github.com/rhavill/connect-quatro/issues"
   },
   "homepage": "https://github.com/rhavill/connect-quatro#readme",
+  "scripts": {
+    "build": "webpack --config webpack.config.prod.js",
+    "dev"  : "webpack-dev-server --config webpack.config.dev.js --port 8000"
+  },
   "dependencies": {
     "css-loader": "^0.23.1",
     "style-loader": "^0.13.0"
   },
   "devDependencies": {
     "html-webpack-plugin": "^2.8.1",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
   }
 }
