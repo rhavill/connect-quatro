@@ -1,1 +1,1 @@
-module.exports = "It works from the game module.";
+module.exports = "This was exported from the game module.";

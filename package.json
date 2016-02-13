@@ -21,6 +21,7 @@
     "style-loader": "^0.13.0"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^2.8.1",
     "webpack": "^1.12.13"
   }
 }
