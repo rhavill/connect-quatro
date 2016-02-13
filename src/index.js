@@ -3,4 +3,6 @@ if (module.hot) {
 }
 
 require("./style.css");
-document.write(require("./game.js"));
+
+import Game from './Game'
+let game = new Game();

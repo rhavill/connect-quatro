@@ -13,9 +13,14 @@ module.exports = {
         filename: "bundle.js"
     },
     module: {
-        loaders: [
-            { test: /\.css$/, loaders: ["style","css"] }
-        ]
+        loaders: [{
+            test: /\.css$/,
+            loaders: ["style","css"]
+            }, {
+            test: /\.js$/,
+            loaders: ['babel'],
+            include: __dirname + '/src'
+        }]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

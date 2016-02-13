@@ -4,7 +4,8 @@
   "description": "Strategy game based on Connect Four.",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --port 8000"
   },
   "repository": {
     "type": "git",
@@ -16,15 +17,15 @@
     "url": "https://github.com/rhavill/connect-quatro/issues"
   },
   "homepage": "https://github.com/rhavill/connect-quatro#readme",
-  "scripts": {
-    "build": "webpack --config webpack.config.prod.js",
-    "dev"  : "webpack-dev-server --config webpack.config.dev.js --port 8000"
-  },
   "dependencies": {
     "css-loader": "^0.23.1",
     "style-loader": "^0.13.0"
   },
   "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
     "html-webpack-plugin": "^2.8.1",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
