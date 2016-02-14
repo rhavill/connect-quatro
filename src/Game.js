@@ -1,5 +1,5 @@
-import factory from './CheckerFactory'
-import Renderer from './Renderer'
+import factory from './scene/CheckerFactory'
+import Renderer from './scene/Renderer'
 
 
 export default class  Game {

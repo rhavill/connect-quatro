@@ -1,7 +1,7 @@
-import {VIEW_ANGLE, ASPECT, NEAR, FAR, WIDTH, HEIGHT}  from './constants'
+import {WIDTH, HEIGHT}  from './constants'
 
 import Table from './Table'
-import Camera from './Camera'
+import cameraMaker from './CameraMaker'
 import Light from './Light'
 import Room from './Room'
 
@@ -9,7 +9,7 @@ export default class Renderer {
 
     constructor(rootElement) {
         this.scene = new THREE.Scene();
-        this.camera = new Camera;
+        this.camera = cameraMaker.make(WIDTH/HEIGHT);
         this.scene.add(new Light().sceneObject);
         this.scene.add(new Room().sceneObject);
         this.scene.add(new Table().sceneObject)
