@@ -5,7 +5,7 @@ import cameraMaker from './CameraMaker'
 import Light from './Light'
 import Room from './Room'
 
-export default class Renderer {
+export default class Scene {
 
     constructor(rootElement) {
         this.scene = new THREE.Scene();
