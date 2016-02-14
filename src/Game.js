@@ -5,7 +5,7 @@ import Renderer from './Renderer'
 export default class  Game {
     constructor() {
         this.renderer = new Renderer(document.body);
-        let checker = factory.makeChecker();
+        let checker = factory.makeChecker('red');
         this.renderer.add(checker.getMesh());
 
     }
