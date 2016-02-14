@@ -21,7 +21,7 @@ export default class Renderer {
         this.scene.add( axes );
 
         var floorMaterial = new THREE.MeshBasicMaterial( {color: new THREE.Color("rgb(250, 250, 210)"), side: THREE.DoubleSide} );
-        var floorGeometry = new THREE.PlaneGeometry(10, 10, 2, 1);
+        var floorGeometry = new THREE.PlaneGeometry(25, 25);
         var floor = new THREE.Mesh(floorGeometry, floorMaterial);
         floor.rotation.x = 90*(Math.PI/180);
         this.scene.add(floor);
