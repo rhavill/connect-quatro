@@ -10,10 +10,11 @@ class CheckerFactory {
     }
 
     makeChecker(color, x=0, y=0) {
-        let mesh = new THREE.Mesh(this.geometry, this.material[color]);
-        mesh.rotation.x += Math.PI/2;
-        mesh.position.set(x, y, 0)
-        return new Checker(mesh);
+        let checker = new Checker
+        checker.sceneObject = new THREE.Mesh(this.geometry, this.material[color]);
+        checker.sceneObject.rotation.x += Math.PI/2;
+        checker.sceneObject.position.set(x, y, 0)
+        return checker;
     }
 }
 

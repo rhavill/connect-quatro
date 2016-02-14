@@ -1,11 +1,7 @@
-export default class Checker {
-    constructor(mesh) {
-        console.log('Checker constructed')
-        this.mesh = mesh
-    }
+import Entity from './Entity'
 
-    getMesh() {
-        return this.mesh
+export default class Checker extends Entity {
+    initSceneObject() {
     }
 
 }
