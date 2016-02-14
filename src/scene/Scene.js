@@ -2,7 +2,7 @@ import {WIDTH, HEIGHT, CHECKER_RADIUS, CHECKER_HEIGHT}  from './constants'
 
 import Table from './Table'
 import Board from './Board'
-import cameraMaker from './CameraMaker'
+import Camera from './Camera'
 import CheckerFactory from './CheckerFactory'
 
 import Light from './Light'
@@ -12,7 +12,7 @@ export default class Scene {
 
     constructor(rootElement) {
         this.scene = new THREE.Scene();
-        this.camera = cameraMaker.make(WIDTH/HEIGHT);
+        this.camera = new Camera(WIDTH/HEIGHT);
         this.scene.add(new Light().sceneObject);
         this.scene.add(new Room().sceneObject);
         this.scene.add(new Table().sceneObject)
@@ -33,7 +33,4 @@ export default class Scene {
         this.renderer.render(this.scene, this.camera.sceneObject);
     }
 
-    add(sceneObject) {
-        this.scene.add(sceneObject)
-    }
 }

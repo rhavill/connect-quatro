@@ -8,10 +8,6 @@ export default class SlatFactory {
     }
 
     make() {
-        let slat = new Slat;
-        slat.sceneObject = new THREE.Mesh(this.geometry, this.material);
-        //slat.sceneObject.position.y = -1;
-        //slat.sceneObject.rotation.x = 90*(Math.PI/180);        let checker = new Checker
-        return slat;
+        return new Slat(this.geometry, this.material);
     }
 }

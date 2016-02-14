@@ -1,7 +1,8 @@
-import Entity from './Entity'
 
-export default class Slat extends Entity {
-    
+export default class Slat {
+    constructor(geometry, material) {
+        this.sceneObject = new THREE.Mesh(geometry, material);
+    }
 }
 
 

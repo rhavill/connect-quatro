@@ -1,10 +1,8 @@
-import Entity from './Entity'
 import SlatFactory from './SlatFactory'
 
-export default class Board extends Entity {
-    initSceneObject() {
+export default class Board {
+    constructor() {
         this.sceneObject = new THREE.Group();
-
     }
 }
 
