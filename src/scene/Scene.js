@@ -16,7 +16,7 @@ export default class Scene {
         this.scene.add(new Light().sceneObject);
         this.scene.add(new Room().sceneObject);
         this.scene.add(new Table().sceneObject)
-        this.scene.add(new Board().sceneObject)
+        this.scene.add(new Board(CHECKER_RADIUS, CHECKER_HEIGHT).sceneObject)
 
         let axes = new THREE.AxisHelper(5);
         this.scene.add( axes );
