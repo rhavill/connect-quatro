@@ -4,8 +4,8 @@ import Renderer from './Renderer'
 
 export default class  Game {
     constructor() {
-        this.renderer = new Renderer(document.body);
-        let checker = factory.makeChecker('red', -13.5, 9);
+        this.renderer = new Renderer(document.getElementById('game'));
+        let checker = factory.makeChecker('red', -30, 15);
         this.renderer.add(checker.getMesh());
 
     }

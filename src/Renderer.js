@@ -18,7 +18,7 @@ export default class Renderer {
         //this.scene.add( this.light2 );
         this.renderer = new THREE.WebGLRenderer();
         this.renderer.setSize(WIDTH, HEIGHT);
-        rootElement.appendChild(this.renderer.domElement);
+        rootElement.parentNode.replaceChild(this.renderer.domElement, rootElement);
     }
 
     render() {
