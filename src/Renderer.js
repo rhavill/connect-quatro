@@ -5,7 +5,9 @@ export default class Renderer {
     constructor(rootElement) {
         this.scene = new THREE.Scene();
         this.camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
-        this.camera.position.set( 0, 0, 30 );
+        this.camera.position.set(0,45,60);
+        this.camera.lookAt(this.scene.position);
+        //this.scene.fog = new THREE.Fog( 0xFFFFFF, 1000, FAR );
         this.scene.add( new THREE.AmbientLight( 0xffffff ) );
         this.light = new THREE.DirectionalLight( 0xFFFFFF, 2.25 );
         this.light.position.set( 200, 400, 500 );
