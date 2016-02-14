@@ -2,6 +2,8 @@ import {WIDTH, HEIGHT}  from './constants'
 
 import Table from './Table'
 import cameraMaker from './CameraMaker'
+import factory from './CheckerFactory'
+
 import Light from './Light'
 import Room from './Room'
 
@@ -16,6 +18,8 @@ export default class Scene {
 
         let axes = new THREE.AxisHelper(5);
         this.scene.add( axes );
+        let checker = factory.makeChecker('red', 2, 4);
+        this.scene.add(checker.sceneObject);
 
         this.renderer = new THREE.WebGLRenderer();
         this.renderer.setSize(WIDTH, HEIGHT);
@@ -26,7 +30,7 @@ export default class Scene {
         this.renderer.render(this.scene, this.camera.sceneObject);
     }
 
-    add(mesh) {
-        this.scene.add(mesh)
+    add(sceneObject) {
+        this.scene.add(sceneObject)
     }
 }
