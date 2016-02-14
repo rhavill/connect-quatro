@@ -5,7 +5,6 @@ export default class  Entity {
     }
 
     initSceneObject() {
-        this.sceneObject = new THREE.Object3D()
     }
 }
 

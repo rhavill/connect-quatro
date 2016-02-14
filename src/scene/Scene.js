@@ -1,8 +1,9 @@
-import {WIDTH, HEIGHT}  from './constants'
+import {WIDTH, HEIGHT, CHECKER_RADIUS, CHECKER_HEIGHT}  from './constants'
 
 import Table from './Table'
+import Board from './Board'
 import cameraMaker from './CameraMaker'
-import factory from './CheckerFactory'
+import CheckerFactory from './CheckerFactory'
 
 import Light from './Light'
 import Room from './Room'
@@ -15,10 +16,12 @@ export default class Scene {
         this.scene.add(new Light().sceneObject);
         this.scene.add(new Room().sceneObject);
         this.scene.add(new Table().sceneObject)
+        this.scene.add(new Board().sceneObject)
 
         let axes = new THREE.AxisHelper(5);
         this.scene.add( axes );
-        let checker = factory.makeChecker('red', 2, 4);
+        let checkerfactory = new CheckerFactory(CHECKER_RADIUS, CHECKER_HEIGHT);
+        let checker = checkerfactory.make('red');
         this.scene.add(checker.sceneObject);
 
         this.renderer = new THREE.WebGLRenderer();
