@@ -25,34 +25,34 @@ length=4; width=4;
         //);
         //let path = new THREE.Path( curve.getPoints( 600 ) );
 
-        let hole = new THREE.Shape();
+        //let hole = new THREE.Shape();
 
         //hole.moveTo(0,2);
         //hole.ellipse(0,0,2,2,0,2*Math.PI)
 
-        let holePoints = [
-                new THREE.Vector3(-1,-1,0),
-                new THREE.Vector3(1,-1,0),
-                new THREE.Vector3(1,1,0),
-                new THREE.Vector3(-1,1,0)
-            ];
-        hole.fromPoints(holePoints);
+        //let holePoints = [
+        //        new THREE.Vector3(-1,-1,0),
+        //        new THREE.Vector3(1,-1,0),
+        //        new THREE.Vector3(1,1,0),
+        //        new THREE.Vector3(-1,1,0)
+        //    ];
+        //hole.fromPoints(holePoints);
 
-        var ellipse = new THREE.EllipseCurve(2, 2, 1, 1, 0, 2.0 * Math.PI, false);
+        var ellipse = new THREE.EllipseCurve(0, 0, 1, 1, 0, 2.0 * Math.PI, false);
         var ellipsePath = new THREE.CurvePath();
         ellipsePath.add(ellipse);
         var ellipseGeometry = ellipsePath.createPointsGeometry(100);
         var line = new THREE.Line(ellipseGeometry, material);
 
-        var circleRadius = 1;
-        var circleShape = new THREE.Path();
-        circleShape.moveTo( 0, circleRadius );
-        circleShape.quadraticCurveTo( circleRadius, circleRadius, circleRadius, 0 );
-        circleShape.quadraticCurveTo( circleRadius, -circleRadius, 0, -circleRadius );
-        circleShape.quadraticCurveTo( -circleRadius, -circleRadius, -circleRadius, 0 );
-        circleShape.quadraticCurveTo( -circleRadius, circleRadius, 0, circleRadius );
+        //var circleRadius = 1;
+        //var circleShape = new THREE.Path();
+        //circleShape.moveTo( 0, circleRadius );
+        //circleShape.quadraticCurveTo( circleRadius, circleRadius, circleRadius, 0 );
+        //circleShape.quadraticCurveTo( circleRadius, -circleRadius, 0, -circleRadius );
+        //circleShape.quadraticCurveTo( -circleRadius, -circleRadius, -circleRadius, 0 );
+        //circleShape.quadraticCurveTo( -circleRadius, circleRadius, 0, circleRadius );
 
-        shape.holes = [hole]
+        shape.holes = [ellipsePath]
 
         let geometry = new THREE.ShapeGeometry(shape);
         let mesh = new THREE.Mesh(geometry, material)
