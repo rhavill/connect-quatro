@@ -7,7 +7,7 @@ export default class  Game {
     }
 
     run() {
-        this.scene.render();
+        this.scene.animate();
     };
 }
 

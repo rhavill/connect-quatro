@@ -24,6 +24,17 @@ export default class Scene {
         let checker = checkerfactory.make('red');
         this.scene.add(checker.sceneObject);
 
+        var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xF07020 } );
+        // base
+        var cube;
+        cube = new THREE.Mesh(
+        new THREE.CubeGeometry(5, 5, 5 ), cubeMaterial );
+        cube.position.x = -15;	// (20+32) - half of width (20+64+110)/2
+        cube.position.y = 15;	// half of height
+        //cube.position.z = 0;	// centered at origin
+        this.scene.add( cube );
+        this.cube = cube
+
         this.renderer = new THREE.WebGLRenderer();
         this.renderer.setSize(WIDTH, HEIGHT);
         rootElement.parentNode.replaceChild(this.renderer.domElement, rootElement);
@@ -31,6 +42,12 @@ export default class Scene {
 
     render() {
         this.renderer.render(this.scene, this.camera.sceneObject);
+    }
+
+    animate() {
+        this.cube.rotation.y += .05
+        window.requestAnimationFrame(this.animate.bind(this));
+        this.render();
     }
 
 }
