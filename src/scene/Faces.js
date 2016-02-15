@@ -12,13 +12,13 @@ export default class Faces {
         let back = new Face(material, checkerRadius, checkerHeight).sceneObject
         back.position.x = checkerRadius
         back.position.y = checkerRadius
-        back.position.z = -checkerHeight/2
+        back.position.z = -checkerHeight
         this.sceneObject.add(back)
 
         let front = new Face(material, checkerRadius, checkerHeight).sceneObject
         front.position.x = checkerRadius
         front.position.y = checkerRadius
-        front.position.z = checkerHeight/1.9
+        front.position.z = checkerHeight
         this.sceneObject.add(front)
     }
 }
