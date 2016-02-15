@@ -1,3 +1,5 @@
+import THREE from 'three'
+
 import SlatFactory from './SlatFactory'
 
 export default class Slats {

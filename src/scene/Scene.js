@@ -1,5 +1,6 @@
 import {WIDTH, HEIGHT, CHECKER_RADIUS, CHECKER_HEIGHT}  from './constants'
 
+import THREE from 'three'
 import Table from './Table'
 import Board from './Board'
 import Camera from './Camera'
@@ -7,6 +8,8 @@ import CheckerFactory from './CheckerFactory'
 
 import Light from './Light'
 import Room from './Room'
+
+//import OrbitControls from './orbit'
 
 export default class Scene {
 
@@ -23,6 +26,8 @@ export default class Scene {
         let checkerfactory = new CheckerFactory(CHECKER_RADIUS, CHECKER_HEIGHT);
         let checker = checkerfactory.make('red');
         this.scene.add(checker.sceneObject);
+
+        //this.controls = new OrbitControls(this.camera)
 
         var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xF07020 } );
         // base

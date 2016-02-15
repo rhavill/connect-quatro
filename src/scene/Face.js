@@ -1,3 +1,5 @@
+import THREE from 'three'
+
 import FaceSquare from './FaceSquare'
 
 export default class Face {

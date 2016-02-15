@@ -1,3 +1,5 @@
+import THREE from 'three'
+
 import Face from './Face'
 
 export default class Faces {

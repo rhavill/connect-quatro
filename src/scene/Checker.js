@@ -1,3 +1,4 @@
+import THREE from 'three'
 
 export default class Checker {
     constructor(geometry, material) {

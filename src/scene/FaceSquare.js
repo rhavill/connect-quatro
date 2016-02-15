@@ -1,3 +1,4 @@
+import THREE from 'three'
 
 export default class FaceSquare {
     constructor(material, checkerRadius, x, y) {

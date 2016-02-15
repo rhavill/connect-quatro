@@ -1,3 +1,5 @@
+import THREE from 'three'
+
 import Slats from './Slats'
 import Faces from './Faces'
 

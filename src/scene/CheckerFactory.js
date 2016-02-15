@@ -1,3 +1,5 @@
+import THREE from 'three'
+
 import Checker from './Checker'
 
 export default class CheckerFactory {
