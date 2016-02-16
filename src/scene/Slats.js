@@ -10,7 +10,7 @@ export default class Slats {
             let slat = slatFactory.make()
             slat.sceneObject.rotation.y += Math.PI/2
             slat.sceneObject.position.x = i*checkerRadius*2
-            slat.sceneObject.position.y = checkerRadius*6
+            slat.sceneObject.position.y = checkerRadius*8
             this.sceneObject.add(slat.sceneObject)
         }
     }
