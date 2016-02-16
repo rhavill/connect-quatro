@@ -10,7 +10,7 @@ export default class FaceSquare {
         shape.lineTo( checkerRadius,-checkerRadius );
         shape.lineTo( -checkerRadius,-checkerRadius );
 
-        var ellipse = new THREE.EllipseCurve(0, 0, checkerRadius *.75, checkerRadius *.75, 0, 2.0 * Math.PI, false);
+        var ellipse = new THREE.EllipseCurve(0, 0, checkerRadius *.85, checkerRadius *.85, 0, 2.0 * Math.PI, false);
         var ellipsePath = new THREE.CurvePath();
         ellipsePath.add(ellipse);
         var ellipseGeometry = ellipsePath.createPointsGeometry(100);
