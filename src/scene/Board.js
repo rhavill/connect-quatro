@@ -16,7 +16,7 @@ export default class Board {
         let bottom = new THREE.Mesh(geometry, material)
         bottom.rotation.x = Math.PI/2
         bottom.rotation.z = Math.PI/2
-        bottom.position.y += checkerRadius*1.9
+        bottom.position.y += checkerRadius*1.75
         bottom.position.x += checkerRadius*7
         this.sceneObject.add(bottom)
 
