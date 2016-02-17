@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
@@ -10,7 +11,12 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loaders: ["style","css"] }
+            { test: /\.css$/, loaders: ["style","css"] },
+            {
+                test: /\.js$/,
+                loaders: ['babel'],
+                include: __dirname + '/src'
+            }
         ]
     },
     plugins: [
@@ -22,6 +28,9 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        new CopyWebpackPlugin([
+            {from: 'src/assets', to: 'assets'}
+        ])
     ]
 };
