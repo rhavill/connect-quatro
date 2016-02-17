@@ -11,5 +11,6 @@ export default class Board {
         this.sceneObject.add(new Faces(checkerRadius, checkerHeight).sceneObject)
         this.sceneObject.add(new Legs(checkerRadius, checkerHeight).sceneObject)
         this.sceneObject.position.y += checkerRadius*2
+        this.sceneObject.position.x -= checkerRadius*7
     }
 }
