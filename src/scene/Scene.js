@@ -25,16 +25,16 @@ export default class Scene {
         this.scene.add( axes );
         let checkerfactory = new CheckerFactory(CHECKER_RADIUS, CHECKER_HEIGHT);
         let checker = checkerfactory.make('red');
-        checker.sceneObject.position.set(28, 20, 0)
+        checker.sceneObject.position.set(CHECKER_RADIUS*1, CHECKER_RADIUS*5, 0)
         this.scene.add(checker.sceneObject);
         checker = checkerfactory.make('black');
-        checker.sceneObject.position.set(36, 20, 0)
+        checker.sceneObject.position.set(CHECKER_RADIUS*1, CHECKER_RADIUS*7, 0)
+        this.scene.add(checker.sceneObject);
+        checker = checkerfactory.make('black');
+        checker.sceneObject.position.set(CHECKER_RADIUS*3, CHECKER_RADIUS*5, 0)
         this.scene.add(checker.sceneObject);
         checker = checkerfactory.make('red');
-        checker.sceneObject.position.set(36, 28, 0)
-        this.scene.add(checker.sceneObject);
-        checker = checkerfactory.make('black');
-        checker.sceneObject.position.set(28, 28, 0)
+        checker.sceneObject.position.set(CHECKER_RADIUS*3, CHECKER_RADIUS*7, 0)
         this.scene.add(checker.sceneObject);
 
         this.renderer = new THREE.WebGLRenderer();
