@@ -21,8 +21,6 @@ export default class Scene {
         this.scene.add(new Board(CHECKER_RADIUS, CHECKER_HEIGHT).sceneObject)
         this.controls = new OrbitControls(this.camera.sceneObject)
 
-        let axes = new THREE.AxisHelper(5);
-        this.scene.add( axes );
         let checkerfactory = new CheckerFactory(CHECKER_RADIUS, CHECKER_HEIGHT);
         let checker = checkerfactory.make('red');
         checker.sceneObject.position.set(0, CHECKER_RADIUS*5, 0)
